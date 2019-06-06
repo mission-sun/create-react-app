@@ -1,23 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import Main from './main';
+import Goods from './goods';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          main组件主要功能是父子组件传递信息
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Main />
+        <p> 通过redux 传递信息</p>
+        <Goods />
       </header>
     </div>
   );
