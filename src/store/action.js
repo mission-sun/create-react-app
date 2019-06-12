@@ -17,8 +17,10 @@ export const reduxAction = (data) => ({
 })
 export function changeRdeux () {
     return (dispatch) => {
-        axios.get('https://www.easy-mock.com/mock/5b45a08018ceb55f228258a2/example/easymock#!method=get')
+        // axios.get('/index/getPCBannerList.html')
+        axios.get('/index/sysPinUser/getPinUserType')
         .then((res) => {
+            console.log('请求返回数据res', res);
             const action = reduxAction(res.data.data);
             dispatch(action);
         })
